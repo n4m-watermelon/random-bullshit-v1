@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import CopyText from "./components/CopyText";
+import { RANDOM_BULLSHIT } from "./constant";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="container">
+        <div className="mb-[20px] flex items-center justify-end">
+          <div>
+            <img
+              className="w-[180px] h-[180px] object-cover "
+              src="/images/cheems-dance.gif"
+              alt="cheems-dance"
+            />
+            <h1 className="text-black dark:text-white font-extrabold text-[20px]">
+              Click vào text để copy!
+            </h1>
+          </div>
+        </div>
+        <div className="flex flex-col gap-y-[35px]">
+          {RANDOM_BULLSHIT?.map((item, index) => (
+            <CopyText key={index} text={item.text} />
+          ))}
+        </div>
+      </div>
+      <ToastContainer />
+    </>
   );
 }
 
