@@ -16,6 +16,5 @@ root.render(
         <App />
       </Background>
     </ThemeProvider>
-    ,
   </React.StrictMode>
 );

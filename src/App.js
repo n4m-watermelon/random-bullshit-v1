@@ -8,9 +8,9 @@ function App() {
     <>
       <div className="container">
         <div className="mb-[20px] flex items-center justify-end">
-          <div>
+          <div className="pointer-events-none">
             <img
-              className="w-[180px] h-[180px] object-cover "
+              className="w-[180px] h-[180px] object-cover pointer-events-none"
               src="/images/cheems-dance.gif"
               alt="cheems-dance"
             />

@@ -10,14 +10,14 @@ const OPTIONS_TOAST = {
   progress: undefined,
 };
 function CopyText({ text }) {
-  const [copySuccess, setCopySuccess] = useState("");
+  const [copySuccess, setCopySuccess] = useState(false);
   const copyToClipBoard = async (copyMe) => {
     toast("🦄 Copied!", OPTIONS_TOAST);
     try {
       await navigator.clipboard.writeText(copyMe);
-      setCopySuccess("Copied!");
+      setCopySuccess(true);
     } catch (err) {
-      setCopySuccess("Failed to copy!");
+      setCopySuccess(false);
     }
   };
 

@@ -4,6 +4,7 @@ body {
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 15px;
+  box-sizing: border-box;
 }
 .container {
   width: min(100% - 2rem, 70rem);
